@@ -59,7 +59,6 @@ public class PromoPrizeController {
         if (!upd.remove(prize)) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
         }
-        System.out.println("upd" + upd);
         promo.get().setPrizes(upd);
         promoRepo.save(promo.get());
         return ResponseEntity.status(HttpStatus.OK).build();
